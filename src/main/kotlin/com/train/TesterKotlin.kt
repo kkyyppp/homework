@@ -15,6 +15,8 @@ fun main(args: Array<String>) {
     var roundTripTicketAmount = scanner.nextInt()
     ticket.setRroundTicketQuantity(roundTripTicketAmount)
 
+    scanner.close()
+
     ticket.printInformation()
 
 }

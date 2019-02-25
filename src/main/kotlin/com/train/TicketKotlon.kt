@@ -27,7 +27,7 @@ class TicketKotlon(oneWayTicketPrice:Int, discount:Float) {
 
 
 
-    fun setTicketQuantity(ticketQuantity:Int) {
+     public fun setTicketQuantity(ticketQuantity:Int) {
         this.ticketQuantity = ticketQuantity
     }
 
