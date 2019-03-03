@@ -13,12 +13,23 @@ public class Tester {
         int ticketQuantity = scanner.nextInt();
         ticket.setTicketQuantity(ticketQuantity);
 
-        System.out.print("How many round-trip tickets: ");
-        int roundTripTicketQuantity = scanner.nextInt();
-        ticket.setRoundTripTicketQuantity(roundTripTicketQuantity);
+        while (ticketQuantity != -1) {
+
+            System.out.print("How many round-trip tickets: ");
+            int roundTripTicketQuantity = scanner.nextInt();
+            ticket.setRoundTripTicketQuantity(roundTripTicketQuantity);
+
+            System.out.println("Total tickets: " + ticketQuantity);
+            System.out.println("Round-trip: " + roundTripTicketQuantity);
+            System.out.println("Total: " + ticket.getTotalPrice());
+
+            System.out.print("Please enter number of tickets: ");
+            ticketQuantity = scanner.nextInt();
+            ticket.setTicketQuantity(ticketQuantity);
+        }
 
         scanner.close();
 
-        ticket.printInfomation();
+        System.out.println("Finish");
     }
 }

@@ -15,14 +15,12 @@ public class Ticket {
     }
 
 
-    public void printInfomation() {
+    public int getTotalPrice() {
 
         int totalPrice = roundTripTicketQuantity*roundTripTicketPrice +
                 (ticketQuantity-roundTripTicketQuantity)*oneWayTicketPrice;
 
-        System.out.println("Total tickets: "+ ticketQuantity);
-        System.out.println("Round-trip: "+ roundTripTicketQuantity);
-        System.out.println("Total: "+ totalPrice);
+        return totalPrice;
     }
 
 
