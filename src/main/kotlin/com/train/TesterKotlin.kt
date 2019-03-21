@@ -11,12 +11,20 @@ fun main(args: Array<String>) {
     var ticketAmount = scanner.nextInt()
     ticket.setTicketQuantity(ticketAmount)
 
-    print("How many round-trip tickets: ")
-    var roundTripTicketAmount = scanner.nextInt()
-    ticket.setRroundTicketQuantity(roundTripTicketAmount)
+    while(ticketAmount != -1) {
+        print("How many round-trip tickets: ")
+        var roundTripTicketAmount = scanner.nextInt()
+        ticket.setRroundTicketQuantity(roundTripTicketAmount)
 
+        println("Total tickets: " + ticketAmount)
+        println("Round-trip: $roundTripTicketAmount")
+        println("Total: ${ticket.getTotalPrice()}")
+
+        print("Please enter number of tickets: ")
+        ticketAmount = scanner.nextInt()
+        ticket.setTicketQuantity(ticketAmount)
+    }
     scanner.close()
 
-    ticket.printInformation()
-
+    println("Finish")
 }

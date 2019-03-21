@@ -15,14 +15,12 @@ class TicketKotlon(oneWayTicketPrice:Int, discount:Float) {
 
 
 
-    fun printInformation() {
+    fun getTotalPrice():Int {
 
         val totalPrice:Int = roundTicketQuantity * roundTripTicketPrice +
                 (ticketQuantity - roundTicketQuantity) * oneWayTicketPrice
 
-        println("Total tickets: "+ ticketQuantity)
-        println("Round-trip: $roundTicketQuantity")
-        println("Total: $totalPrice")
+        return totalPrice
     }
 
 
