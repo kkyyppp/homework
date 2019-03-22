@@ -34,19 +34,15 @@ fun main(args: Array<String>) {
 
 abstract class BOX(val length:Float, val width:Float, val height:Float) {
 
-    abstract fun vadidate( length:Float,  width:Float,  height:Float):Boolean
+    fun vadidate( length:Float,  width:Float,  height:Float):Boolean {
+        return (length<this.length) && (width<this.width) && (height<this.height)
+    }
 }
 
 class Box3(length:Float, width:Float, height:Float): BOX(length, width, height) {
 
-    override fun vadidate(length: Float, width: Float, height: Float): Boolean {
-        return (length<this.length) && (width<this.width) && (height<this.height)
-    }
 }
 
 class Box5(length:Float, width:Float, height:Float): BOX(length, width, height) {
 
-    override fun vadidate(length: Float, width: Float, height: Float): Boolean {
-        return (length<this.length) && (width<this.width) && (height<this.height)
-    }
 }

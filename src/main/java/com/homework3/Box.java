@@ -11,5 +11,7 @@ public abstract class Box {
         this.height = height;
     }
 
-    public abstract boolean validate(float length, float width, float height) ;
+    public boolean validate(float length, float width, float height) {
+        return (length < this.length) &&  (width < this.width) && (height < this.height) ;
+    }
 }
